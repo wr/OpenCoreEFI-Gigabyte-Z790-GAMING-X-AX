@@ -29,10 +29,10 @@
 - Above 4G Decoding
 - Resizable BAR
 
-## Installing Windows (optional)
+## 📺 Installing Windows (optional)
 I suggest doing this first. Make sure you create separate partitions (or, ideally, use separate NVMe drives entirely) for MacOS and Windows.
 
-## Installing MacOS
+## 🖥️ Installing MacOS
 1. Insert the USB drive into a **USB 2.0 port** on your computer. Sometimes USB 3.0 ports work fine, but occasionally I ran into odd issues running both the Windows and Mac installers from USB 3.0 ports.
 1. Boot from USB. OpenCore loader should appear. Choose "Install MacOS Sonoma"
 1. With any luck, the MacOS installer will load. If you have issues...
@@ -49,7 +49,7 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
   
 
 
-## My build
+## 🗼 My build
 - Gigabyte Z790 Gaming X AX motherboard
 - Intel i5-13600KF
 - Sapphire PULSE Radeon 6600 XT 8GB
