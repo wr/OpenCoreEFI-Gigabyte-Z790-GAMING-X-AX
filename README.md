@@ -1,6 +1,16 @@
 # 🔧 OpenCore EFI for Gigabyte Z790 GAMING X AX
 👉 This repository contains OpenCore EFI configuration files for the Gigabyte Z790 GAMING X AX motherboard, designed to run macOS Sonoma 14.2.1 on an Intel® Core™ i5-13600KF CPU and a Radeon™ RX 6600 XT GPU.
 
+## ✅ What works
+- Core MacOS features
+- Handoff
+- Wi-Fi and Bluetooth
+- 2.5GbE Ethernet
+- Sleep / Wake
+- Power Nap (I turned this off though)
+- Most USB ports (MacOS limits to 15 total)
+- Very stable. Rarely crashes, good temps with overclock enabled, quiet.
+
 ## 💿 Preparing the installer
 1. Download this repository—you need the contents of the EFI folder.
 1. Download MacOS Sonoma using [gibMacOS](https://github.com/corpnewt/gibMacOS). 14.2.1 is the most recent as of this guide.
@@ -10,7 +20,6 @@
 1. Generate your own iMacPro1,1 SMBIOS using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
    - You need to do this in order to get a serial number (etc.) that can work with iCloud and Apple's services. Make sure you apply the changes to the `config.plist` in your USB's `EFI` partition.
 1. Unmount the USB—it's ready to install MacOS.
-
 
 ## 🔧 Preparing the BIOS
 #### 🚫 Disable
