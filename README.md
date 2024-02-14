@@ -3,13 +3,19 @@
 
 ## ✅ What works
 - Core MacOS features
-- Handoff
+- Handoff*
+- Continuity Camera*
+- AirDrop*
+- Sidecar*
+- Universal Control*
 - Wi-Fi and Bluetooth
 - 2.5GbE Ethernet
 - Sleep / Wake
 - Power Nap (I turned this off though)
 - Most USB ports (MacOS limits to 15 total)
 - Very stable. Rarely crashes, good temps with overclock enabled, quiet.
+
+* = Requires Fenvi T919 BT/Wi-Fi Card
 
 ## 💿 Preparing the installer
 1. Download this repository—you need the contents of the EFI folder.
@@ -56,6 +62,9 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
 1. Mount your hard drive's `EFI` partition (`diskutil list`, then `sudo diskutil mount /dev/diskXsX`) and copy the EFI folder to it.
    - In your BIOS, choose `OpenCore` as your primary boot option. OpenCore should pick up Windows automatically.
   
+## Post-install
+1. Follow [this guide](https://macos86.it/topic/6464-sonoma-os-wi-fi-is-back/#comment-143280) to get Wi-Fi working in Sonoma
+  
 
 
 ## 🗼 My build
@@ -65,7 +74,7 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
 - G.SKILL Ripjaws S5 Series 64GB (2 x 32GB) DDR5 6000
 - 2x 1TB WD_BLACK SN850X (one for MacOS, one for Windows)
 - Fractal Design North case
-- fenvi T919 PCI-E WiFi Adapter (for Bluetooth. The built-in Intel Wi-Fi works in Sonoma)
+- fenvi T919 PCI-E WiFi Adapter
 - Thermalright CPU Contact Frame for LGA 1700
 - be quiet! Dark Rock Pro 4 250W TDP CPU Cooler
 - Seasonic Focus GX-850 power supply
