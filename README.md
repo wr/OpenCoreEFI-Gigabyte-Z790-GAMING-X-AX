@@ -15,7 +15,7 @@
 - Most USB ports (MacOS limits to 15 total)
 - Very stable. Rarely crashes, good temps with overclock enabled, quiet.
 
-* = Requires Fenvi T919 BT/Wi-Fi Card
+`* = Requires Fenvi T919 BT/Wi-Fi Card`
 
 ## 💿 Preparing the installer
 1. Download this repository—you need the contents of the EFI folder.
