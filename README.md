@@ -19,12 +19,13 @@
 
 ## 💿 Preparing the installer
 1. Download this repository—you need the contents of the EFI folder.
-1. Download MacOS Sonoma using [gibMacOS](https://github.com/corpnewt/gibMacOS). 14.2.1 is the most recent as of this guide.
+1. Download MacOS Sequoia using [gibMacOS](https://github.com/corpnewt/gibMacOS). 15.0 is the most recent as of this guide.
 1. Copy the installer to a USB 2.0 flash drive using [createinstallmedia](https://support.apple.com/en-us/101578)
 1. Mount the USB's `EFI` partition (`diskutil list`, then `sudo diskutil mount /dev/diskXsX`)
 1. Copy the whole EFI folder itself into the EFI partition.
 1. Generate your own iMacPro1,1 SMBIOS using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
    - You need to do this in order to get a serial number (etc.) that can work with iCloud and Apple's services. Make sure you apply the changes to the `config.plist` in your USB's `EFI` partition.
+1. Generate your own CPUFriendDataProvider.kext using [CPUFriendFriend](https://github.com/corpnewt/CPUFriendFriend) and replace the one in the Kexts folder.
 1. Unmount the USB—it's ready to install MacOS.
 
 ## 🔧 Preparing the BIOS
@@ -49,7 +50,7 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
 
 ## 🖥️ Installing MacOS
 1. Insert the USB drive into a **USB 2.0 port** on your computer. Sometimes USB 3.0 ports work fine, but occasionally I ran into odd issues running both the Windows and Mac installers from USB 3.0 ports.
-1. Boot from USB. OpenCore loader should appear. Choose "Install MacOS Sonoma"
+1. Boot from USB. OpenCore loader should appear. Choose "Install MacOS Sequoia"
 1. With any luck, the MacOS installer will load. If you have issues...
    - Try adding `-v` under `boot-args` in `config.plist` to see verbose output (you can also get this by pressing Ctrl+V in OpenCore loader)
    - Google and ChatGPT are your friends
@@ -63,7 +64,7 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
    - In your BIOS, choose `OpenCore` as your primary boot option. OpenCore should pick up Windows automatically.
   
 ## Post-install
-1. Follow [this guide](https://macos86.it/topic/6464-sonoma-os-wi-fi-is-back/#comment-143280) to get Wi-Fi working in Sonoma
+1. Follow [this guide](https://github.com/Edwardwich/BCM-WIFI-Sequoia) to get Wi-Fi working in Sequoia. **Don't follow the "One Key OCLP" instructions** they were meant for the Sequoia beta only. OCLP 2.0.0 and later support Sequoia out of the box.
   
 
 
@@ -81,3 +82,7 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
 
 ![Screenshot 2024-01-01 at 8 42 48 PM](https://github.com/wr/OpenCoreEFI-Gigabyte-Z790-GAMING-X-AX/assets/884715/d153cbe9-669b-440f-9a60-5d6efefce030)
 
+
+## Guides and articles that helped me:
+- https://www.reddit.com/r/hackintosh/comments/17ou09j/successfully_built_a_hackintosh_with_i513600k_msi/
+- https://github.com/scotthowson/ROG-STRIX-Z790-A-GAMING-WIFI-Intel-i9-13900k-RX-6800-XT-OpenCore-1.0.1?tab=readme-ov-file
