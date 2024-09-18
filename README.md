@@ -1,5 +1,5 @@
 # 🔧 OpenCore EFI for Gigabyte Z790 GAMING X AX
-👉 This repository contains OpenCore EFI configuration files for the Gigabyte Z790 GAMING X AX motherboard, designed to run macOS Sonoma 14.2.1 on an Intel® Core™ i5-13600KF CPU and a Radeon™ RX 6600 XT GPU.
+👉 This repository contains OpenCore EFI configuration files for the Gigabyte Z790 GAMING X AX motherboard, designed to run macOS Sonoma 14.2.1 on an Intel® Core™ i5-13600KF CPU and a Radeon™ RX 6600 XT GPU.z
 
 ## ✅ What works
 - Core MacOS features
