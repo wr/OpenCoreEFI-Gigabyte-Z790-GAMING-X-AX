@@ -1,3 +1,5 @@
+![Screenshot 2024-09-18 at 2 54 53 PM](https://github.com/user-attachments/assets/38907c7d-a968-4a8d-92d7-3398b73c88cf)
+
 # 🔧 OpenCore EFI for Gigabyte Z790 GAMING X AX
 👉 This repository contains OpenCore EFI configuration files for the Gigabyte Z790 GAMING X AX motherboard, designed to run macOS Sequoia 15.0 on an Intel® Core™ i5-13600KF CPU and a Radeon™ RX 6600 XT GPU.
 
@@ -17,6 +19,7 @@
 
 `* = Requires Fenvi T919 BT/Wi-Fi Card`
 
+
 ## 💿 Preparing the installer
 1. Download this repository—you need the contents of the EFI folder.
 1. Download MacOS Sequoia using [gibMacOS](https://github.com/corpnewt/gibMacOS). 15.0 is the most recent as of this guide.
@@ -28,7 +31,9 @@
 1. Generate your own CPUFriendDataProvider.kext using [CPUFriendFriend](https://github.com/corpnewt/CPUFriendFriend) and replace the one in the Kexts folder.
 1. Unmount the USB—it's ready to install MacOS.
 
+
 ## 🔧 Preparing the BIOS
+
 #### 🚫 Disable
 - Fast Boot
 - Secure Boot
@@ -45,8 +50,10 @@
 - Above 4G Decoding
 - Resizable BAR
 
+
 ## 📺 Installing Windows (optional)
 I suggest doing this first. Make sure you create separate partitions (or, ideally, use separate NVMe drives entirely) for MacOS and Windows.
+
 
 ## 🖥️ Installing MacOS
 1. Insert the USB drive into a **USB 2.0 port** on your computer. Sometimes USB 3.0 ports work fine, but occasionally I ran into odd issues running both the Windows and Mac installers from USB 3.0 ports.
@@ -63,10 +70,9 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
 1. Mount your hard drive's `EFI` partition (`diskutil list`, then `sudo diskutil mount /dev/diskXsX`) and copy the EFI folder to it.
    - In your BIOS, choose `OpenCore` as your primary boot option. OpenCore should pick up Windows automatically.
   
-## Post-install
+## 🧹 Post-install
 1. Follow [this guide](https://github.com/Edwardwich/BCM-WIFI-Sequoia) to get Wi-Fi working in Sequoia. **Don't follow the "One Key OCLP" instructions** they were meant for the Sequoia beta only. OCLP 2.0.0 and later support Sequoia out of the box.
   
-
 
 ## 🗼 My build
 - Gigabyte Z790 Gaming X AX motherboard
@@ -80,9 +86,7 @@ I suggest doing this first. Make sure you create separate partitions (or, ideall
 - be quiet! Dark Rock Pro 4 250W TDP CPU Cooler
 - Seasonic Focus GX-850 power supply
 
-![Screenshot 2024-01-01 at 8 42 48 PM](https://github.com/wr/OpenCoreEFI-Gigabyte-Z790-GAMING-X-AX/assets/884715/d153cbe9-669b-440f-9a60-5d6efefce030)
 
-
-## Guides and articles that helped me:
+## 🙏 Guides and articles that helped me:
 - https://www.reddit.com/r/hackintosh/comments/17ou09j/successfully_built_a_hackintosh_with_i513600k_msi/
 - https://github.com/scotthowson/ROG-STRIX-Z790-A-GAMING-WIFI-Intel-i9-13900k-RX-6800-XT-OpenCore-1.0.1?tab=readme-ov-file
